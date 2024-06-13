@@ -17,7 +17,7 @@ type TicketList struct {
 
 func GetAllTicketLists() ([]TicketList, error) {
 
-	rows, err := db.DB.Query("SELECT id, title, img, price, descriptionEng, descriptionThai FROM ticketLists")
+	rows, err := db.DB.Query("SELECT * FROM ticketLists")
 
 	if err != nil {
 		return nil, fmt.Errorf("could not fetch events: %w", err)
